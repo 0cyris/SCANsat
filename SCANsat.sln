@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCANdebug", "SCANdebug\SCANdebug.csproj", "{81775A58-7251-4E16-9923-AC60DC3DAED6}"
 EndProject
@@ -14,6 +14,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCANdocs", "SCANdocs\SCANdocs.csproj", "{EB972BB8-20E2-441A-8848-30F179C0A12F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCANmechjeb", "SCANmechjeb\SCANmechjeb.csproj", "{A2B942AF-3AB2-4A9F-9211-FFC47364128D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3AE13948-477D-4375-8AB4-B45664966D9E} = {3AE13948-477D-4375-8AB4-B45664966D9E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -92,6 +92,8 @@
     <Compile Include="SCAN_Toolbar\SCANtoolbarwrapper.cs" />
     <Compile Include="SCAN_UI\SCANcolorSelection.cs" />
     <Compile Include="SCAN_UI\SCANBigMap.cs" />
+    <Compile Include="SCAN_UI\SCANoverlayController.cs" />
+    <Compile Include="SCAN_UI\SCANresourceSettings.cs" />
     <Compile Include="SCAN_UI\SCANzoomWindow.cs" />
     <Compile Include="SCAN_UI\UI_Framework\SCANremoteView.cs" />
     <Compile Include="SCANcontroller.cs" />
@@ -124,7 +126,7 @@
   </ProjectExtensions>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\KSP Dev Build\Kerbal Space Program\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Games\Kerbal Space Program - DEV\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
@@ -134,9 +136,13 @@
       <HintPath>..\..\..\KSP_Data\Managed\mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\KSP Dev Build\Kerbal Space Program\KSP_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Games\Kerbal Space Program - DEV\KSP_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup />
+  <PropertyGroup>
+    <PostBuildEvent>call "E:\Unity\Editor\Data\MonoBleedingEdge\bin\cli.bat" "E:\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.0\pdb2mdb.exe" $(TargetFileName)
+for %2525%2525I in (*.dll *.pdb *.mdb) do copy %2525%2525I "E:\Games\Kerbal Space Program - DEV\GameData\SCANsat\Plugins"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

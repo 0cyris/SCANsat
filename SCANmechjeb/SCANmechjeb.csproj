@@ -34,12 +34,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\KSP Dev Build\Kerbal Space Program\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Games\Kerbal Space Program - DEV\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MechJeb2, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GameData\SCANsat\MechJeb2.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Games\Kerbal Space Program - DEV\GameData\MechJeb2\Plugins\MechJeb2.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SCANsat, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -49,7 +49,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\KSP Dev Build\Kerbal Space Program\KSP_Data\Managed\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Games\Kerbal Space Program - DEV\KSP_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -60,6 +60,10 @@
     <Compile Include="SCANmechStarter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>call "E:\Unity\Editor\Data\MonoBleedingEdge\bin\cli.bat" "E:\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.0\pdb2mdb.exe" $(TargetFileName)
+for %2525%2525I in (*.dll *.pdb *.mdb) do copy %2525%2525I "E:\Games\Kerbal Space Program - DEV\GameData\SCANsat\Plugins"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
